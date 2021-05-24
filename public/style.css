@@ -1,0 +1,264 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.game-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.player {
+    width: 400px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.p1 {
+    text-align: right;
+}
+
+.connected, .ready {
+    font-weight: normal;
+}
+
+.connected span, .ready span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background: red;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+span.green {
+    background: green;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-user {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #6ae1ff;
+    margin: 20px;
+}
+
+.grid-user div, .grid-opponent div {
+    outline: 1px solid #97eaff;
+    transition: .1s ease-in-out;
+}
+
+.grid-opponent div:hover {
+    background-color: #a2ecff;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+}
+
+.grid-opponent {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #6ae1ff;
+    margin: 20px;
+}
+.available-ships-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-available-ships {
+    display: flex;
+    margin: 20px;
+}
+
+.ship div {
+    width: 40px;
+    height: 40px;
+}
+
+.single-masted-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.double-masted-container {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.double-masted-container-vertical {
+    display: block;
+    width: 40px;
+    height: 80px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.three-masted-container {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.three-masted-container-vertical {
+    display: block;
+    width: 40px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.four-masted-container {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.four-masted-container-vertical {
+    display: block;
+    width: 40px;
+    height: 160px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    margin: 5px;
+}
+
+.start {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.end {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.start.vertical { 
+    border-radius: 0;  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.end.vertical {
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.single-masted-0, .single-masted-1, .single-masted-2, .single-masted-3,
+.single-masted-0.vertical, .single-masted-1.vertical, .single-masted-2.vertical, .single-masted-3.vertical {
+    border-radius: 20px;
+}
+
+.grid-user div.taken {
+    outline: 0px;
+}
+
+
+.taken {
+    background-color: gainsboro;
+}
+
+.hit::before {
+    content: '';
+    position: absolute;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.miss::before {
+    content: '';
+    position: absolute;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+button {
+    all: unset;
+    width: 200px;
+    text-align: center;
+    background: #ffba3a;
+    padding: 10px;
+    border-radius: 60px;
+    color: #fff5ef;
+    cursor: pointer;
+    border: 1px solid #ff6600;
+}
+
+button:hover {
+    background: #ffa600;
+}
+
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.win {
+    background-color: #acff2f54;
+}
+.loose {
+    background-color: #ff00009f;
+}
+h3 {
+    text-align: center;
+    font-size: 40px;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    position: relative;
+    top: 25%;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+#restart {
+    position: relative;
+    top: 40%;
+    left: calc(50% - 100px);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <title>Battle Ships</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="game-info">
+            <div class="player p1">
+                Player 1
+                <div class="connected"><span></span>Connected</div>
+                <div class="ready"><span></span>Ready</div>
+            </div>
+            <div class="player p2">
+                Player 2
+                <div class="connected">Connected<span></span></div>
+                <div class="ready">Ready<span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="grid grid-user"></div>
+            
+        <div class="grid grid-opponent"></div>
+    </div>
+
+    <div class="container">
+        <div class="hidden-info">
+            <button id="start">Start Game</button>
+            <button id="rotate">Rotate Ships</button>
+            <h3 id="whose-turn"></h2>
+            <h2 id="info"></h3>
+        </div>
+    </div>
+    
+
+    <div class="available-ships-container">
+        <div class="grid-available-ships">
+
+            <div class="ship single-masted-container" draggable="true"><div id="single-masted-0-0"></div></div>
+            <div class="ship single-masted-container" draggable="true"><div id="single-masted-1-0"></div></div>
+            <div class="ship single-masted-container" draggable="true"><div id="single-masted-2-0"></div></div>
+            <div class="ship single-masted-container" draggable="true"><div id="single-masted-3-0"></div></div>
+
+            <div class="ship double-masted-container" draggable="true"><div id="double-masted-0-0"></div><div id="double-masted-0-1"></div></div>
+            <div class="ship double-masted-container" draggable="true"><div id="double-masted-1-0"></div><div id="double-masted-1-1"></div></div>
+            <div class="ship double-masted-container" draggable="true"><div id="double-masted-2-0"></div><div id="double-masted-2-1"></div></div>
+
+            <div class="ship three-masted-container" draggable="true"><div id="three-masted-0-0"></div><div id="three-masted-0-1"></div><div id="three-masted-0-2"></div></div>
+            <div class="ship three-masted-container" draggable="true"><div id="three-masted-0-1"></div><div id="three-masted-1-1"></div><div id="three-masted-1-2"></div></div>
+
+            <div class="ship four-masted-container" draggable="true"><div id="four-masted-0-0"></div><div id="four-masted-0-1"></div><div id="four-masted-0-2"></div><div id="four-masted-0-3"></div></div>
+        </div>
+    </div>
+    <div id="gameOver">
+        <h1 id="winner">YOU WIN!</h1>
+        <button id="restart" onclick="window.location.reload();">Restart Game</button>
+    </div>
+</body>
+</html>
